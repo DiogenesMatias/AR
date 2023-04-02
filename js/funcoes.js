@@ -24,7 +24,8 @@ function renderPlaces(places) {
 
        let model = document.createElement('a-entity');
        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-       model.setAttribute('gltf-model', './assets/magnemite/scene.gltf');
+       //model.setAttribute('gltf-model', './assets/magnemite/scene.gltf');
+       model.setAttribute('gltf-model', 'https://rawcdn.githack.com/DiogenesMatias/AR/a01d60996dee4af928f213e743683fd53b82d326/assets/magnemite/scene.gltf');
        model.setAttribute('rotation', '0 180 0');
        model.setAttribute('animation-mixer', '');
        model.setAttribute('scale', '0.5 0.5 0.5');
