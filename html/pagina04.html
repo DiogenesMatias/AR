@@ -16,12 +16,14 @@
     
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs='sourceType: webcam;'>
-    <a-marker-camera preset='hiro'>
-       <a-video id="myVideo" src="../assets/video/Teste01.mp4" rotation="-90 0 0" width="4" height="3" scale="2 2 2" opacity="0.65">
-    </a-video>
-    </a-marker-camera>
-    <!--<a-marker-camera preset='custom' type='pattern' url='../assets/marcadores/pattern-ecossistema.patt'></a-marker-camera>-->
     
+    <!--<a-marker-camera preset='custom' type='pattern' url='../assets/marcadores/pattern-ecossistema.patt'></a-marker-camera>-->
+    <a-marker-camera preset='custom' type='pattern' url='../assets/marcadores/pattern-ecossistema.patt'>
+        <!-- Substitua 'nome-do-novo-marcador.patt' pelo nome do arquivo do seu novo marcador -->
+        <a-video id="myVideo" src="../assets/video/Teste01.mp4" rotation="-90 0 0" width="2" height="2" scale="2 2 2" opacity="0.65">
+      </a-video>
+      </a-marker-camera>
+      
   </a-scene>
   
   <!-- Botão virtual para ativar/pausar o vídeo -->
