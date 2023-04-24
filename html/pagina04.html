@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>REALIDADE AUMENTADA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/estilo.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src='../js/funcoes.js'></script>
+
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+    
+    </head>
+    
+    <body style='margin : 0px; overflow: hidden;'>
+      <a-scene embedded arjs='sourceType: webcam;'>
+    
+        <a-video src="../assets/video/Teste01.mp4" width="2" height="1.2" scale="2 2 2" opacity="0.65">
+        </a-video>
+        <!--<a-marker-camera preset='hiro'></a-marker-camera>-->
+        <a-marker-camera preset='custom' type='pattern' url='../assets/marcadores/pattern-ecossistema.patt'></a-marker-camera>
+      </a-scene>
+    </body>
+    </html>
