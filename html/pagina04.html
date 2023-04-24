@@ -31,13 +31,13 @@
       anchor.group.add(plane);
       const start = async() => {
 	await mindarThree.start();
-	videoElement.play(); // Inicia a reprodução do vídeo
 	renderer.setAnimationLoop(() => {
 	  renderer.render(scene, camera);
 	});
       }
       const startButton = document.querySelector("#startButton");
       startButton.addEventListener("click", () => {
+	videoElement.play(); // Inicia a reprodução do vídeo
 	start();
       });
       const stopButton = document.querySelector("#stopButton");
@@ -71,7 +71,7 @@
       <button id="stopButton">Parar Video</button>
     </div>
     <div id="container">
-      <video id="videoElement" autoplay playsinline muted loop>
+      <video id="videoElement" playsinline muted loop>
 	<source src="../assets/video/Teste01.mp4" rotation="-90 0 0" width="4" height="3" scale="2 2 2" opacity="0.65" type="video/mp4">
       </video>
     </div>
