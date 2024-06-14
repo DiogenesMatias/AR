@@ -29,18 +29,84 @@
       <div class="w3-modal-content">
         <div class="w3-container">
           <span onclick="document.getElementById('message1').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-          <p>Bem-vindo! Teste 1</p>
+          <p>Bem-vindo! Teste 1</p><br>
+          <h3>Diógenes Carvalho Matias</h3>
+        </div>
+      </div>
+    </div>
+
+ <div id="message2" class="w3-modal">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+          <span onclick="document.getElementById('message2').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+          <p>Bem-vindo! Teste 2</p>
+        </div>
+      </div>
+    </div>
+
+ <div id="message3" class="w3-modal">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+          <span onclick="document.getElementById('message3').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+          <p>Bem-vindo! Teste 3</p>
+        </div>
+      </div>
+    </div>
+
+ <div id="message4" class="w3-modal">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+          <span onclick="document.getElementById('message4').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+          <p>Bem-vindo! Teste 4</p>
         </div>
       </div>
     </div>
 
     <!-- Repita o modal para as outras mensagens -->
-
     <a-scene
       vr-mode-ui="enabled: false"
       arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
     >
       <!-- Restante do código -->
+ <a-assets>
+            <a-asset-item id="modelo-3d-1" src="../assets/modelos3D/teste01.glb"></a-asset-item>
+            <a-asset-item id="modelo-3d-2" src="../assets/modelos3D/teste02.glb"></a-asset-item>
+            <a-asset-item id="modelo-3d-3" src="../assets/modelos3D/teste03.glb"></a-asset-item>
+            <a-asset-item id="modelo-3d-4" src="../assets/modelos3D/teste04.glb"></a-asset-item>
+          </a-assets>
+    
+          <a-entity
+            gltf-model="#modelo-3d-1"
+            scale="6 6 6"
+            gps-entity-place="latitude: -8.162819; longitude: -34.916836;"
+            onclick="showMessage1()"
+          ></a-entity>
+    
+          <a-entity
+            gltf-model="#modelo-3d-2"
+            scale="6 6 6"
+            gps-entity-place="latitude: -8.162255; longitude: -34.916725;"
+            onclick="showMessage2()"
+          ></a-entity>
+    
+          <a-entity
+            gltf-model="#modelo-3d-3"
+            scale="6 6 6"
+            gps-entity-place="latitude: -8.162241; longitude: -34.917278;"
+            onclick="showMessage3()"
+          ></a-entity>
+
+          <a-entity
+            gltf-model="#modelo-3d-4"
+            scale="6 6 6"
+            gps-entity-place="latitude: -8.162458; longitude: -34.916840;"
+            onclick="showMessage4()"
+          ></a-entity>
+    
+          <a-camera gps-camera rotation-reader> </a-camera>
+
+
+
     </a-scene>
   </body>
 </html>
